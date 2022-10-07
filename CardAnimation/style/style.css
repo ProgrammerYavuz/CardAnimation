@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ------------------ Root Varaiables ---------------- */
+:root {
+    --color-default: #646464;
+    --color-aqua:#00FFFF;
+    --color-purple:#9f17ae;
+    --color-indigo: #4c48b4;
+    --color-amber: #f8c52f;
+    --color-deeporange: #f75e00;
+    --color-lightgreen: #87c653;
+    --color-green: #49b159;
+    --color-textcolor: #646464;
+    --color-white: #ffffff;
+    
+    --color-background: #ebf5fc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color-background);
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-navigation-text);
+    transition: 0.5s;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.05),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: var(--color-background);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container .card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container .card:hover #one{
+    background: linear-gradient(45deg, var(--color-purple), var(--color-indigo));
+}
+
+.container .card:hover #two{
+    background: linear-gradient(45deg, var(--color-amber), var(--color-deeporange));
+}
+
+.container .card:hover #three{
+    background: linear-gradient(45deg, var(--color-lightgreen), var(--color-green));
+}
+
+.container .card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.container .card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .card:hover .box .content h2{
+    color: rgba(0, 0, 0, 0.06);
+}
+
+.container .card .box .content h3{
+    font-size: 1.8em;
+    color: var(--color-textcolor);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card .box .content p{
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--color-textcolor);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .card:hover .box .content h3, .container .card:hover .box .content p{
+    color: var(--color-white);
+}
+
+.container .card .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background: var(--color-aqua);
+    color: var(--color-white);
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card:hover #one .content a{
+    background: var(--color-white);
+    color: var(--color-indigo);
+}
+
+.container .card:hover #two .content a{
+    background: var(--color-white);
+    color: var(--color-deeporange);
+}
+
+.container .card:hover #three .content a{
+    background: var(--color-white);
+    color: var(--color-green);
+}
